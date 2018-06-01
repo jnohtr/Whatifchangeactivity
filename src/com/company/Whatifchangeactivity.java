@@ -1,0 +1,53 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Whatifchangeactivity {
+
+    public static void main(String[] args) {
+	// write your code here
+        String fname, lname, status;
+        double gpa;
+        int hours;
+
+
+        Scanner keyboard = new Scanner(System.in);
+
+        System.out.print( "Student's First Name? " );
+        fname = keyboard.next();
+
+        System.out.print( "Student's Last Name? " );
+        lname = keyboard.next();
+
+        System.out.print( "Student's GPA? " );
+        gpa = keyboard.nextDouble();
+
+        System.out.print( "Student's Current Course Load? " );
+        hours = keyboard.nextInt();
+
+        System.out.println();
+        System.out.println("Student Name :" + fname + " " + lname);
+        System.out.println("Student GPA :" + gpa);
+        if (gpa >= 3 && hours > 11)
+        {
+            System.out.println("This student is in good standing.");
+        } else if (gpa >= 2 && hours > 11)
+        {
+            System.out.println("This student needs to study more.");
+        } else if (gpa >= 1 && hours > 11)
+        {
+            System.out.println("This student is on academic probation.");
+        } else if (hours > 11)
+        {
+            System.out.println("This student has been expelled.");
+        } else
+            System.out.print("part time");
+
+        /*if ( hours > 11)
+            System.out.print("full time");
+        else
+            System.out.print("part time");
+            what ever you want this is too much kk l 3 11 12 hmm why*/
+    }
+
+}
